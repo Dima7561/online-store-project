@@ -4,7 +4,6 @@ import ProductsCard from "../../../../comonComponents/productsCard/index";
 import Pagination from "@material-ui/lab/Pagination";
 
 import styles from "./styles";
-import PokemonCard from "../../../../comonComponents/PokemonCard";
 
 const ProductsLayout = ({
   classes,

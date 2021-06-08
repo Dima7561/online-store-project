@@ -1,6 +1,6 @@
 import img from "../../../../static/images/picatchy.png";
 
-const styles = (theme) => ({
+const styles = () => ({
   wrapper: {
     backgroundImage: `url(${img})`,
     background: "no-Repeat",

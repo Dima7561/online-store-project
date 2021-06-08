@@ -1,9 +1,7 @@
 import PropTypes from "prop-types";
 
-import { ROUTES } from "../../../../routes/routesNames";
 import { withStyles, Box, Button } from "@material-ui/core";
 import styles from "./styles";
-import { Link } from "react-router-dom";
 
 const HomePageLayout = ({ classes }) => {
   return (

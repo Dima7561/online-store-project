@@ -1,13 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { calculateTotalPrice } from "../../../helpers/globalUtils";
-import {
-  GET_CART_REQUEST,
-  INCR_CART,
-  REMOVE_FROM_CART,
-  sendOrderStart,
-  SUM_CART,
-} from "../actions";
+import { GET_CART_REQUEST, REMOVE_FROM_CART, SUM_CART } from "../actions";
 import CartPageLayout from "../components/CartPageLayout";
 
 const CartPageContainer = () => {
@@ -23,13 +16,6 @@ const CartPageContainer = () => {
     },
     [cartPokemon]
   );
-  // const onHandleItemChange = useCallback(
-  //   (payloud) => {
-  //     dispatch(SUM_CART(payloud));
-  //   },
-  //   [dispatch]
-  // );
-
   const onHandleItemChange = useCallback(
     (payload) => {
       if (payload.fieldToEdit === "quantity") {
@@ -50,21 +36,12 @@ const CartPageContainer = () => {
     },
     [cartPokemon]
   );
-  // const onHandleSubmit = useCallback(
-  //   (data) => {
-  //     const totalPrice = calculateTotalPrice(cartPokemon);
-
-  //     dispatch(sendOrderStart({ ...data, totalPrice }));
-  //   },
-  //   [cartPokemon]
-  // );
   return (
     <div>
       <CartPageLayout
         allPokemon={cartPokemon}
         handleRemoveFromCart={handleRemoveFromCart}
         onHandleItemChange={onHandleItemChange}
-        // onHandleSubmit={onHandleSubmit}
       />
     </div>
   );

@@ -25,15 +25,6 @@ const productsDataReducer = handleActions(
       isLoading: false,
       errors: payload.response,
     }),
-    // [actions.INCREMENT_COUNTER]: (state, { payload }) => {
-    //   const copy = [...state.allPokemon];
-    //   const foundCounter = copy[payload];
-    //   foundCounter.quantityInCart = foundCounter.quantityInCart + 1;
-    //   return {
-    //     ...state,
-    //     allPokemon: copy,
-    //   };
-    // },
   },
   initialState1
 );

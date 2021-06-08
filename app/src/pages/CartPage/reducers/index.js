@@ -1,11 +1,6 @@
-import { useSelector } from "react-redux";
-import { useParams } from "react-router";
 import { handleActions } from "redux-actions";
 import { calculateCartItemPrice } from "../../../helpers/globalUtils";
-import { GET_PRODUCTS_SUCCESS } from "../../ProductsPage/actions";
-import productsDataReducer from "../../ProductsPage/reducers";
 import * as actions from "../actions";
-import { initialState1 } from "../../ProductsPage/reducers";
 
 const initialState = {
   cartPokemon: [],
@@ -64,14 +59,3 @@ const CartReducers = handleActions(
 );
 
 export default CartReducers;
-
-// [actions.INCR_CART]: (state, { payload }) => {
-//   const copy = [...state.cartPokemon];
-//   const foundCounter = copy.find((area) => area.id === payload).price;
-//   foundCounter.price = foundCounter.price + 1;
-
-//   return {
-//     ...state,
-//     cartPokemon: copy,
-//   };
-// },
